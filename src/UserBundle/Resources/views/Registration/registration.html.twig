@@ -1,0 +1,21 @@
+{% extends "UserBundle::layout.html.twig" %}
+
+{% block title %}New registration{% endblock %}
+
+{% block fos_user_content %} 
+    {{ form_start(form, {attr: {class: 'form-horizontal center-form'}}) }}
+        {{ form_widget(form) }}
+        {{ form_rest(form) }}
+        <input type="submit" class="btn btn-caps btn-big" value="signup" />
+    {{ form_end(form) }}
+    
+    {% block javascript %}
+        {{ parent() }}
+        {% javascripts
+            '@UserBundle/Resources/public/js/jquery-1.11.3.min.js'
+            '@UserBundle/Resources/public/js/grabber.js'
+            filter='yui_js' %}
+            <script src="{{ asset_url }}" type="text/javascript"></script>
+        {% endjavascripts %}
+    {% endblock %}
+{% endblock fos_user_content %}

@@ -1,0 +1,5 @@
+#Used by FOSRestBundle
+emails_grabbed : 
+  type: rest
+  resource:     "UserBundle:EmailGrabbedRest"
+  name_prefix:  api_

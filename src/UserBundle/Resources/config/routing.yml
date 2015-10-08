@@ -1,0 +1,13 @@
+post:
+    resource: "@UserBundle/Controller/UserController.php"
+    type:     annotation
+
+signup_account:
+    path: /signup/account
+    defaults: { _controller: UserBundle:User:signupAccount }
+    
+signup_succes:
+    path: /signup/succes
+    defaults: { _controller: UserBundle:User:signupSuccess }
+
+
